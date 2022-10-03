@@ -49,9 +49,19 @@ header {
     flex-direction: column;
     flex-wrap: wrap;
     padding: 100px 0% 180px;
-    
-
 }
+
+@media (min-width: 1800px)   {
+    .contackt {
+    margin-top: 150px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 400px 0% 400px;
+    }
+}
+
 h1 {
     font-size: 90px;
 }
