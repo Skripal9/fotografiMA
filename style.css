@@ -1,11 +1,10 @@
 * {
     margin: 0 auto;
-      
 }
 
 body {
-    background-color: rgb(153, 127, 127);
     min-height: 100%;
+    background-color: black;
 }
 
 .wrapper {
@@ -16,13 +15,14 @@ body {
 
 header {
     position: fixed;
+    z-index: 100;
     top: 0;
     left: 0;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: black;
+    background-color: rgb(0, 0, 0);
 }
 
 .header-nav_a {
@@ -32,38 +32,50 @@ header {
     padding: 0 20px;
 }
 
-.title-logo {
+.header-nav_a:hover {
+    color: grey;
+    transition: 0.8s ease;
+}
+
+.title-logo_img {
     max-width: 300px;
     max-height: 90px;
 }
 
-.social-icons{
+.social-icons_img{
     max-width: 35px;
     padding: 0 20px;
 }
 
 .contackt{
-    margin-top: 150px;
+    background-color: rgb(153, 127, 127);
     display: flex;
     align-items: center;
     flex-direction: column;
     flex-wrap: wrap;
-    padding: 100px 0% 180px;
+    padding: 220px 0% 180px;
 }
 
 @media (min-width: 1800px)   {
     .contackt {
-    margin-top: 150px;
+    background-color: rgb(153, 127, 127);    
     display: flex;
     align-items: center;
     flex-direction: column;
     flex-wrap: wrap;
-    padding: 400px 0% 400px;
+    padding: 540px 0% 400px;
     }
 }
 
 h1 {
     font-size: 90px;
+}
+
+h2 {
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    padding: 15px 0;
 }
 
 h1 ,
@@ -89,7 +101,7 @@ button {
 
 .container {
     background-color: black;
-    
+    position: sticky;
 }
 
 .container-img {
@@ -106,12 +118,33 @@ button {
 
     -webkit-filter: grayscale(99%); 
     filter: grayscale(99%); 
-       
 }
 
-
 .container-img_works:hover {
-    transition: filter .7s ease-in-out;
+    transition: filter .5s ease-in-out;
     -webkit-filter: grayscale(0%); 
     filter: grayscale(0%); 
+    visibility: visible;
+    transition: 1s;
+}
+
+p {
+    font-size: 60px;
+    color: white;
+    display: inline-block;
+    transform: translate(96px, -250px);
+    
+    transition: .5s ease;
+    opacity: 0;
+    max-width: 2px;
+}
+
+.content {
+    max-width: 400px;
+    max-height: 350px;
+}
+
+.content:hover p {
+    opacity: 1;
+    cursor: pointer;
 }
